@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sailaja.dev | Developer Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080816;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: #101024;
+    border-bottom: 1px solid #29294a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #a855f7;
+}
+
+nav {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ddddf5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 65px 8%;
+    background:
+        radial-gradient(
+            ellipse at top right,
+            #34205d 0%,
+            #111025 40%,
+            #080816 75%
+        );
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: appear 1.2s ease;
+}
+
+.welcome {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+h1 {
+    font-size: clamp(40px, 8vw, 68px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+h1 span,
+h2 span {
+    color: #b56aff;
+}
+
+.hero h2 {
+    font-size: clamp(22px, 5vw, 32px);
+    color: #d9d8ff;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #c6c6df;
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(100deg, #9333ea, #2563eb);
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 22px #8139e8;
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 1px solid #a855f7;
+}
+
+section:not(.hero) {
+    padding: 65px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+#about p {
+    color: #c6c6df;
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(120px, 1fr)
+    );
+    gap: 15px;
+}
+
+.card {
+    background: #14142b;
+    border: 1px solid #37345d;
+    border-radius: 12px;
+    padding: 22px 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #a855f7;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #462276;
+}
+
+.project-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 25px;
+    background: linear-gradient(
+        135deg,
+        #17152f,
+        #101024
+    );
+    border: 1px solid #494070;
+    border-radius: 16px;
+    box-shadow: 0 0 25px #17112c;
+}
+
+.project-card h3 {
+    color: #38bdf8;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #c6c6df;
+    margin-bottom: 15px;
+}
+
+.tech {
+    color: #c084fc !important;
+    font-size: 14px;
+}
+
+#hackathons p {
+    text-align: center;
+    color: #c6c6df;
+    max-width: 650px;
+    margin: auto;
+}
+
+#contact {
+    text-align: center;
+    background: #0d0d20;
+}
+
+#contact p {
+    margin: 12px 0;
+    color: #c6c6df;
+}
+
+#contact a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #9999b8;
+    background: #101024;
+    font-size: 13px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 50px 7%;
+    }
+
+    section:not(.hero) {
+        padding: 50px 7%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="#home" class="logo">Sailaja<span>.dev</span></a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+
+        <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+        <h1>Hi, I'm <span>Sailaja</span></h1>
+
+        <h2>Aspiring Full Stack Developer</h2>
+
+        <p class="description">
+            I'm a B.Tech 3rd-year Computer Science student
+            passionate about coding, web development and
+            building innovative solutions to real-world problems.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn">Explore Projects</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <p>
+        I'm Sailaja, a B.Tech Computer Science and Engineering
+        student in my 3rd year. I'm developing my programming,
+        web development and problem-solving skills. My goal is
+        to participate in company hackathons, collaborate with
+        other developers and build technology that solves
+        real-world problems.
+    </p>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">My <span>Skills</span></h2>
+
+    <div class="cards">
+        <div class="card">🌐 HTML</div>
+        <div class="card">🎨 CSS</div>
+        <div class="card">⚡ JavaScript</div>
+        <div class="card">🐍 Python</div>
+        <div class="card">🚀 FastAPI</div>
+        <div class="card">🔧 Git & GitHub</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Featured <span>Project</span></h2>
+
+    <div class="project-card">
+
+        <h3>🏥 Swasthya-Guard</h3>
+
+        <p>
+            A healthcare assistance application designed to
+            help users access useful healthcare information.
+            The project aims to make healthcare information
+            easier to access and understand.
+        </p>
+
+        <p class="tech">
+            HTML • CSS • JavaScript • Python • FastAPI
+        </p>
+
+        <p>
+            Project demonstration and source-code links
+            will be added after deployment.
+        </p>
+
+    </div>
+</section>
+
+<section id="hackathons">
+    <h2 class="section-title">Hackathons & <span>Goals</span></h2>
+
+    <p>
+        I'm interested in participating in company hackathons,
+        collaborating with teams and creating practical
+        technology solutions. I'll update this section with
+        my participation and achievements.
+    </p>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+
+    <p>Let's connect and build something meaningful!</p>
+
+    <p>Email: Add your email address</p>
+
+    <p>GitHub: Add your GitHub profile link</p>
+
+    <p>LinkedIn: Add your LinkedIn profile link</p>
+</section>
+
+<footer>
+    <p>© 2026 Sailaja.dev | Designed with passion 💜</p>
+</footer>
+
+</body>
+</html>
