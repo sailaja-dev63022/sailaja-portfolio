@@ -1,0 +1,11 @@
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Sailaja.dev portfolio loaded!");
+
+    const buttons = document.querySelectorAll(".btn");
+
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            console.log("Portfolio button clicked!");
+        });
+    });
+});
